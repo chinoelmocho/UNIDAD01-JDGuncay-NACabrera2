@@ -105,7 +105,7 @@ public class Principal {
     auto7.color="Rojo";
     auto7.precio=20000;
     
-    System.out.println(auto4.mostrarinfo()+"\n");
-    System.out.println("El auto es de "+auto4.getPAismarca()+"\n");
+    System.out.println(auto7.mostrarinfo()+"\n");
+    System.out.println("El auto es de "+auto7.getPAismarca()+"\n"+auto7.getProvincia()+"\n"+auto7.calcularDepreciacion(2022)+"\n"+auto7.calcularIva()+"\n"+auto7.costodematricula(2022));
     }   
 }
