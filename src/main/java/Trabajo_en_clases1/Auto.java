@@ -125,10 +125,17 @@ public double costodematricula (int yearactual) {
 public boolean sepuedeasegurar(int yearactual) {
     var retorno=false;
     var edad=this.calcularedad(yearactual);
-    if (edad<=5&&this.precio< 1000){
-    
+    if (edad<=5&&this.precio< 10000){
         retorno=true;
-    }else{
+    }else{if(edad>5 && edad<11 && this.precio>=10000 && this.precio<=20000){
+        retorno=true;
+    }else{if(edad>10 && edad<16 && this.precio>=20000 && this.precio<=30000){
+        retorno=true;
+    }else{if(edad>16){
+        retorno=false;
+    }
+     
+    }}
     }
     return retorno;
     }
