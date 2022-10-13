@@ -18,7 +18,8 @@ public class Auto {
     float precio;
 
     public String mostrarinfo() {
-        var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario;
+        var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario+" es"
+                + " de color "+this.color+" y del años"+this.años;
         return retorno;
     }
 
@@ -106,13 +107,24 @@ public double calcularDepreciacion(int yearActual) {
 public double costodematricula (int yearactual) {
     var retorno=0.0d;
     var edad=this.calcularedad(yearactual);
+    if(edad<6){
+    retorno=this.precio *0.1;
+    }else{if(edad>5 && edad<11){
+        retorno=this.precio*0.08;
+    }else{if(edad>10 && edad<16){
+        retorno=this.precio*0.07;
+    }else{if(edad>16){
+        retorno=this.precio*0.06;
+    }
+     
+    }}}
+   return retorno;
     /* Edad de 0-5 y precios menos de 10000SI Edad 10-15 y precio enos de 10000 a 2000 Edad*/
 }
-public boolean esTaxi() {}
+
 public boolean sepuedeasegurar(int yearactual) {
-    var edad=0.0d;
     var retorno=false;
-    edad=this.calcularedad(yearactual);
+    var edad=this.calcularedad(yearactual);
     if (edad<=5&&this.precio< 1000){
     
         retorno=true;
@@ -121,21 +133,23 @@ public boolean sepuedeasegurar(int yearactual) {
     return retorno;
     }
 
-}
-public boolean esclasico() {}
-public int calcularedad(int yearActual) {
+
+
+public int calcularedad(int yearActual){
     var retorno=0;
-    
-    retorno=yearActual-this.años;
-    
+    retorno=yearActual- this.años;
     return retorno;
-}
-public boolean esplacavalida() {}
-public double calculartazasolidaria () {}
+
+        }}
 
 
 
-}
+
+
+
+
+
+
 
     
 
