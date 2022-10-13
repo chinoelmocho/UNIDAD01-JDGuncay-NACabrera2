@@ -46,6 +46,10 @@ public class Principal {
     auto1.placa="ABC34";
     auto1.marca="Cherolet";
     auto1.propietario="Juan";
+    auto1.años=2000;
+    auto1.color="Rojo";
+    auto1.precio=20000;
+    
     var auto2 = new Auto();
     auto2.placa="ABF68";
     auto2.marca="Toyota";
@@ -72,8 +76,10 @@ public class Principal {
     auto6.propietario="alex";
     
     System.out.println(auto1.mostrarinfo()+"\n");
-    System.out.println("El auto es de "+auto1.getPAismarca()+"\n");
-    
+    System.out.println("El auto es de "+auto1.getPAismarca()+"\n"+auto1.getProvincia()+"\n");
+    System.out.println("el auto tiene "+auto1.calcularedad(2022));
+            
+            
     System.out.println(auto2.mostrarinfo()+"\n");
     System.out.println("El auto es de "+auto2.getPAismarca()+"\n");
     
