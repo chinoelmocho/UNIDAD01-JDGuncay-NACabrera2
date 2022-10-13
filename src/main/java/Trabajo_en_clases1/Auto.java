@@ -13,6 +13,9 @@ public class Auto {
     String placa;
     String propietario;
     String marca;
+    int años;
+    String color;
+    float precio;
 
     public String mostrarinfo() {
         var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario;
@@ -20,7 +23,28 @@ public class Auto {
     }
 
     public String getProvincia() {
-        var retorno = "";
+        var primeraletra = "";
+        var retorno=" ";
+        primeraletra = this.placa.substring(0,1);
+        switch(primeraletra){
+            case "A":
+                retorno="Azuay";
+                break;
+            case "F":
+                retorno="Pichincha";
+                break;
+            case "G":
+                retorno="Guayas";
+                break;
+            case "U":
+                retorno="Cañar";
+            default:
+                retorno="Provicia no registrada";
+            }
+        
+        
+        
+        
         return retorno;
 
     }
@@ -43,7 +67,75 @@ public class Auto {
         }
         
         return retorno;
-    }}
+    }
+
+public int getNumeroContinente() {
+    var marcaPais=this.getPAismarca();
+    var retorno=0;
+    switch(marcaPais){
+        case "USA":
+            retorno=2;
+                break;
+        case "Japon":
+            retorno=3;
+                   break;
+        case "Alemania":
+            retorno=4;
+        default:
+            retorno=0;
+}
+    
+    return retorno;
+
+
+}
+public double calcularIva() {
+    var retorno=0.0;
+    retorno=(this.precio) * 0.12;
+    return retorno;
+}
+public double calcularDepreciacion(int yearActual) {
+    var retorno=0.0d;
+    var edad=this.calcularedad(yearActual);
+    retorno=edad*0.1*this.precio;
+    
+    return retorno;
+    
+}
+/* Calcular e costo de la matricula 0-5 10%*/
+public double costodematricula (int yearactual) {
+    var retorno=0.0d;
+    var edad=this.calcularedad(yearactual);
+    /* Edad de 0-5 y precios menos de 10000SI Edad 10-15 y precio enos de 10000 a 2000 Edad*/
+}
+public boolean esTaxi() {}
+public boolean sepuedeasegurar(int yearactual) {
+    var edad=0.0d;
+    var retorno=false;
+    edad=this.calcularedad(yearactual);
+    if (edad<=5&&this.precio< 1000){
+    
+        retorno=true;
+    }else{
+    }
+    return retorno;
+    }
+
+}
+public boolean esclasico() {}
+public int calcularedad(int yearActual) {
+    var retorno=0;
+    
+    retorno=yearActual-this.años;
+    
+    return retorno;
+}
+public boolean esplacavalida() {}
+public double calculartazasolidaria () {}
+
+
+
+}
 
     
 
