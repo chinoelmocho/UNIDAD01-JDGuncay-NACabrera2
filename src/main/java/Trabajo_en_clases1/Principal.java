@@ -93,6 +93,19 @@ public class Principal {
     System.out.println("El auto es de "+auto5.getPAismarca()+"\n");
     
     System.out.println(auto6.mostrarinfo()+"\n");
-    System.out.println("El auto es de "+auto6.getPAismarca()+"\n");
+    System.out.println("El auto es de "+auto6.getPAismarca()+"\n  \n \n \n \n  ");
+    
+    
+    
+    var auto7 = new Auto();
+    auto7.placa="ABC34";
+    auto7.marca="Cherolet";
+    auto7.propietario="Juan";
+    auto7.años=2000;
+    auto7.color="Rojo";
+    auto7.precio=20000;
+    
+    System.out.println(auto4.mostrarinfo()+"\n");
+    System.out.println("El auto es de "+auto4.getPAismarca()+"\n");
     }   
 }
