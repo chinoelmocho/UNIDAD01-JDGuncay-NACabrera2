@@ -52,9 +52,9 @@ public class Principal {
     auto1.precio=20000;
     auto1.color="Rojo";
     System.out.println(auto1.mostrarinfo());
-    System.out.println("El carro es de "+auto1.getPAismarca()+" ademas circula por "+auto1.getProvincia()+" \n El numero de continente del auto es de "+auto1.getNumeroContinente());
-    System.out.println("\nEl automovil conto con un iva de "+auto1.calcularIva()+"\nAdemas el precio comercial actual del carro es de "+auto1.calcularDepreciacion(2022)+"\nAdemas el costo de la matricula es de "+auto1.costodematricula(2022)+" y su estado para poder asegurar su carro es "+auto1.sepuedeasegurar(2022));
-    System.out.println("El estado de la placa es: "+auto1.esPlacaVAlida());
+    System.out.println("El carro es de "+auto1.getpaismarca()+" ademas circula por "+auto1.getprovincia()+" \n El numero de continente del auto es de "+auto1.getnumerocontinente());
+    System.out.println("\nEl automovil conto con un iva de "+auto1.calcularIva()+"\nAdemas el precio comercial actual del carro es de "+auto1.calculardepreciacion(2022)+"\nAdemas el costo de la matricula es de "+auto1.costodematricula(2022)+" y su estado para poder asegurar su carro es "+auto1.sepuedeasegurar(2022));
+    System.out.println("El estado de la placa es: "+auto1.esplacavalida());
     
     /*var auto2 = new Auto();
     auto2.marca="jetour";
