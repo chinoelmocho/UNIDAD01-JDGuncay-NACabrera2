@@ -46,7 +46,7 @@ public class Principal {
     
     var auto1 = new Auto();
     auto1.marca="Toyota";
-    auto1.placa="ABC2522";
+    auto1.placa="A1C2522";
     auto1.propietario="Peres Juanito";
     auto1.año =2012;
     auto1.precio=20000;
@@ -54,7 +54,7 @@ public class Principal {
     System.out.println(auto1.mostrarinfo());
     System.out.println("El carro es de "+auto1.getPAismarca()+" ademas circula por "+auto1.getProvincia()+" \n El numero de continente del auto es de "+auto1.getNumeroContinente());
     System.out.println("\nEl automovil conto con un iva de "+auto1.calcularIva()+"\nAdemas el precio comercial actual del carro es de "+auto1.calcularDepreciacion(2022)+"\nAdemas el costo de la matricula es de "+auto1.costodematricula(2022)+" y su estado para poder asegurar su carro es "+auto1.sepuedeasegurar(2022));
-    System.out.println("La placa es: "+auto1.esPlacaVAlida());
+    System.out.println("El estado de la placa es: "+auto1.esPlacaVAlida());
     
     /*var auto2 = new Auto();
     auto2.marca="jetour";
