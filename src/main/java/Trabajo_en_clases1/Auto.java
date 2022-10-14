@@ -153,7 +153,8 @@ public int calcularedad(int yearActual){
 
         }
 public boolean esClasico(int yearactural,int yearclasico){
-    
+ var retorno=true;
+ return retorno;
 }
 /* ead 0-5 cilindrage<1500:15%costo
 ead 0-5 15000>cilindrage<2000:20%costo
@@ -166,7 +167,8 @@ ead >20 15000<cilindrage<2000:20%costo
 
 */
 public double tazasolidaria(int yearActual,int precio){
-
+var retorno=0;
+return retorno;
 
 }
 public boolean esPlacaVAlida(){
@@ -180,8 +182,9 @@ public boolean esPlacaVAlida(){
         var caracter5=this.placa.charAt(4);
         var caracter6=this.placa.charAt(5);
         var caracter7=this.placa.charAt(6);
-        if(caracter1==&&){
-        }
+        if(Character.isLetter(caracter1) && Character.isLetter(caracter2) && Character.isLetter(caracter3)&& Character.isDigit(caracter4) && Character.isDigit(caracter5) && Character.isDigit(caracter6) && Character.isDigit(caracter7) ){
+        retorno=true;}
     }
-} 
+    return retorno;
+}
 }
