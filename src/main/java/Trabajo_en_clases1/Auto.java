@@ -23,7 +23,7 @@ public class Auto {
         return retorno;
     }
 
-    public String getprovincia() {
+    public String getProvincia() {
         var retorno = "";
         var primeraletra = "";
         primeraletra = this.placa.substring(0, 1);
@@ -47,7 +47,7 @@ public class Auto {
 
     }
 
-    public String getpaismarca() {
+    public String getPaisMarca() {
         var retorno = " ";
         if (this.marca.equals("Cherolet")) {
             retorno = " USA ";
@@ -70,8 +70,8 @@ public class Auto {
         return retorno;
     }
 
-    public int getnumerocontinente() {
-        var marcaPais = this.getpaismarca();
+    public int getNumeroContinente() {
+        var marcaPais = this.getPaisMarca();
         var retorno = 0;
         switch (marcaPais) {
             case "USA":
@@ -96,9 +96,9 @@ public class Auto {
         return retorno;
     }
 
-    public double calculardepreciacion(int yearActual) {
+    public double calcularDepreciacion(int yearActual) {
         var retorno = 0.0d;
-        var edad = this.calcularedad(yearActual);
+        var edad = this.calcularEdad(yearActual);
         retorno = this.precio;
         var contador = 0;
         while (contador < edad) {
@@ -111,9 +111,9 @@ public class Auto {
     }
 
     /* Calcular e costo de la matricula 0-5 10%*/
-    public double costodematricula(int yearactual) {
+    public double costodeMatricula(int yearactual) {
         var retorno = 0.0d;
-        var edad = this.calcularedad(yearactual);
+        var edad = this.calcularEdad(yearactual);
         if (edad < 6) {
             retorno = this.precio * 0.1;
         } else {
@@ -134,9 +134,9 @@ public class Auto {
         /* Edad de 0-5 y precios menos de 10000SI Edad 10-15 y precio enos de 10000 a 2000 Edad*/
     }
 
-    public boolean sepuedeasegurar(int yearactual) {
+    public boolean sepuedeAsegurar(int yearactual) {
         var retorno = false;
-        var edad = this.calcularedad(yearactual);
+        var edad = this.calcularEdad(yearactual);
         if (edad <= 5 && this.precio < 10000) {
             retorno = true;
         } else {
@@ -156,14 +156,14 @@ public class Auto {
         return retorno;
     }
 
-    public int calcularedad(int yearActual) {
+    public int calcularEdad(int yearActual) {
         var retorno = 0;
         retorno = yearActual - this.año;
         return retorno;
 
     }
 
-    public boolean esclasico(int yearactural, int yearclasico) {
+    public boolean esClasico(int yearactural, int yearclasico) {
         var retorno = true;
         return retorno;
     }
