@@ -178,13 +178,13 @@ ead 15-20 cilindrage<1500:15%costo
 ead >20 15000<cilindrage<2000:20%costo
 
      */
-    public double tazasolidaria(int yearActual, int precio) {
+    public double tasaSolidaria(int yearActual, int precio) {
         var retorno = 0;
         return retorno;
 
     }
 
-    public boolean esplacavalida() {
+    public boolean esPlacaValida() {
         var retorno = false;
         var longitud = this.placa.length();
         if (longitud == 7) {
