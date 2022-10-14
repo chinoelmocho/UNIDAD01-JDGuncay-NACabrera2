@@ -16,6 +16,7 @@ public class Auto {
     int año;
     String color;
     float precio;
+    int ciindrage;
 
     public String mostrarinfo() {
         var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario+" es del año "+this.año+" de color "+ this.color+" finalmente el valor del auto es de "+this.precio;
@@ -151,6 +152,36 @@ public int calcularedad(int yearActual){
     return retorno;
 
         }
+public boolean esClasico(int yearactural,int yearclasico){
+    
+}
+/* ead 0-5 cilindrage<1500:15%costo
+ead 0-5 15000>cilindrage<2000:20%costo
+ead 0-5 cilindrage<2000:20%costo
+ead 5-15 cilindrage<1500:15%costo
+ead 5-15 15000<cilindrage<2000:20%costo
+ead 5-15 cilindrage<2000:20%costo
+ead 15-20 cilindrage<1500:15%costo
+ead >20 15000<cilindrage<2000:20%costo
+
+*/
+public double tazasolidaria(int yearActual,int precio){
 
 
+}
+public boolean esPlacaVAlida(){
+    var retorno =false;
+    var longitud=this.placa.length();
+    if(longitud==7){
+        var caracter1=this.placa.charAt(0);
+        var caracter2=this.placa.charAt(1);
+        var caracter3=this.placa.charAt(2);
+        var caracter4=this.placa.charAt(3);
+        var caracter5=this.placa.charAt(4);
+        var caracter6=this.placa.charAt(5);
+        var caracter7=this.placa.charAt(6);
+        if(caracter1==&&){
+        }
+    }
+} 
 }
