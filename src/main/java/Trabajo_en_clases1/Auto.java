@@ -13,19 +13,18 @@ public class Auto {
     String placa;
     String propietario;
     String marca;
-    int años;
+    int año;
     String color;
     float precio;
 
     public String mostrarinfo() {
-        var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario+" es"
-                + " de color "+this.color+" y del años"+this.años;
+        var retorno = "EL auto tiene placa " + this.placa + " y es de maraca " + this.marca + " y el propietario es " + this.propietario+" es del año "+this.año+" de color "+ this.color+" finalmente el valor del auto es de "+this.precio;
         return retorno;
     }
 
     public String getProvincia() {
+        var retorno = "";
         var primeraletra = "";
-        var retorno=" ";
         primeraletra = this.placa.substring(0,1);
         switch(primeraletra){
             case "A":
@@ -69,8 +68,7 @@ public class Auto {
         
         return retorno;
     }
-
-public int getNumeroContinente() {
+    public int getNumeroContinente() {
     var marcaPais=this.getPAismarca();
     var retorno=0;
     switch(marcaPais){
@@ -98,7 +96,12 @@ public double calcularIva() {
 public double calcularDepreciacion(int yearActual) {
     var retorno=0.0d;
     var edad=this.calcularedad(yearActual);
-    retorno=edad*0.1*this.precio;
+    retorno = this.precio;
+    var contador=0;
+    while(contador<edad){
+        retorno= retorno * 0.9;
+        contador+=1;
+    }
     
     return retorno;
     
@@ -131,7 +134,7 @@ public boolean sepuedeasegurar(int yearactual) {
         retorno=true;
     }else{if(edad>10 && edad<16 && this.precio>=20000 && this.precio<=30000){
         retorno=true;
-    }else{if(edad>16){
+    }else{if(edad>16 || this.precio>30000){
         retorno=false;
     }
      
@@ -144,20 +147,10 @@ public boolean sepuedeasegurar(int yearactual) {
 
 public int calcularedad(int yearActual){
     var retorno=0;
-    retorno=yearActual- this.años;
+    retorno=yearActual- this.año;
     return retorno;
 
-        }}
+        }
 
 
-
-
-
-
-
-
-
-
-    
-
-
+}
