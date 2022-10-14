@@ -134,7 +134,7 @@ public class Auto {
         /* Edad de 0-5 y precios menos de 10000SI Edad 10-15 y precio enos de 10000 a 2000 Edad*/
     }
 
-    public boolean sepuedeAsegurar(int yearactual) {
+    public boolean sePuedeAsegurar(int yearactual) {
         var retorno = false;
         var edad = this.calcularEdad(yearactual);
         if (edad <= 5 && this.precio < 10000) {
