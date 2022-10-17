@@ -1,4 +1,5 @@
 
+package DEBER02;
 public class Empleado {
 
     String nombre;
